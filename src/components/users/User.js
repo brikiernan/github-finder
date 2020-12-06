@@ -24,7 +24,8 @@ export default function User({ user, loading, repos, getUser, getUserRepos, matc
   useEffect(() => {
     getUser(match.params.login);
     getUserRepos(match.params.login);
-  }, [getUser, getUserRepos, match.params.login]);
+    // eslint-disable-next-line
+  }, []);
 
   if (loading) return <Spinner />;
 
